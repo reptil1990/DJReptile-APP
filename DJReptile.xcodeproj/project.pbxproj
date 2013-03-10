@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B200679216EA73A60075171B /* GigAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B200679116EA73A60075171B /* GigAnnotation.m */; };
+		B240C43616C83229007A9874 /* NextGigsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B240C43516C83229007A9874 /* NextGigsViewController.m */; };
+		B25A20DE16C2B1810083498B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B25A20DD16C2B1810083498B /* Icon.png */; };
+		B272657816EC023500FCF9F8 /* living.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B272657716EC023500FCF9F8 /* living.gpx */; };
+		B27E681116C30D4E00796C55 /* ActualMusicInDB.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E681016C30D4E00796C55 /* ActualMusicInDB.m */; };
+		B27E685916C4309C00796C55 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B27E685816C4309C00796C55 /* icon@2x.png */; };
+		B27E685B16C430A600796C55 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B27E685A16C430A600796C55 /* icon@2x.png */; };
+		B282884916D536BD00A5BF79 /* facebook_like_button_big.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B282884816D536BD00A5BF79 /* facebook_like_button_big.jpeg */; };
+		B29947A716E8A7AD00E11FB5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29947A616E8A7AC00E11FB5 /* MapKit.framework */; };
+		B29947A916E8B5F800E11FB5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29947A816E8B5F800E11FB5 /* CoreLocation.framework */; };
+		B29A3E1216D2D8600058E2CF /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B29A3E1116D2D8600058E2CF /* FacebookSDKResources.bundle */; };
+		B29A3E1516D2D8A10058E2CF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29A3E1316D2D8A10058E2CF /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B29A3E1616D2D8A10058E2CF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29A3E1416D2D8A10058E2CF /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B29A3E1816D2D8B70058E2CF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29A3E1716D2D8B70058E2CF /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B29A3E1A16D2DA1C0058E2CF /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29A3E1916D2DA1C0058E2CF /* FacebookSDK.framework */; };
 		B2BE89E716C03B1100CBB7EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BE89E616C03B1100CBB7EE /* UIKit.framework */; };
 		B2BE89E916C03B1100CBB7EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BE89E816C03B1100CBB7EE /* Foundation.framework */; };
 		B2BE89EB16C03B1100CBB7EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BE89EA16C03B1100CBB7EE /* CoreGraphics.framework */; };
@@ -20,12 +35,33 @@
 		B2BE8A0316C03B1100CBB7EE /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BE8A0216C03B1100CBB7EE /* FirstViewController.m */; };
 		B2BE8A0516C03B1100CBB7EE /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BE8A0416C03B1100CBB7EE /* first.png */; };
 		B2BE8A0716C03B1100CBB7EE /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BE8A0616C03B1100CBB7EE /* first@2x.png */; };
-		B2BE8A0A16C03B1100CBB7EE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BE8A0916C03B1100CBB7EE /* SecondViewController.m */; };
 		B2BE8A0C16C03B1100CBB7EE /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BE8A0B16C03B1100CBB7EE /* second.png */; };
 		B2BE8A0E16C03B1100CBB7EE /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BE8A0D16C03B1100CBB7EE /* second@2x.png */; };
+		B2BE8A1516C03B8000CBB7EE /* DJ Reptile1,4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2BE8A1416C03B8000CBB7EE /* DJ Reptile1,4.jpg */; };
+		B2BE8A1816C03D3200CBB7EE /* WishMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BE8A1716C03D3200CBB7EE /* WishMusicViewController.m */; };
+		B2BE8A1D16C03DBC00CBB7EE /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BE8A1C16C03DBC00CBB7EE /* libsqlite3.0.dylib */; };
+		B2C92A3416E17DC600671CF7 /* HowtoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C92A3316E17DC600671CF7 /* HowtoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B200679016EA73A60075171B /* GigAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GigAnnotation.h; sourceTree = "<group>"; };
+		B200679116EA73A60075171B /* GigAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GigAnnotation.m; sourceTree = "<group>"; };
+		B240C43416C83228007A9874 /* NextGigsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NextGigsViewController.h; path = ../NextGigsViewController.h; sourceTree = "<group>"; };
+		B240C43516C83229007A9874 /* NextGigsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NextGigsViewController.m; path = ../NextGigsViewController.m; sourceTree = "<group>"; };
+		B25A20DD16C2B1810083498B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		B272657716EC023500FCF9F8 /* living.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = living.gpx; path = ../../../../Desktop/living.gpx; sourceTree = "<group>"; };
+		B27E680F16C30D4E00796C55 /* ActualMusicInDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActualMusicInDB.h; sourceTree = "<group>"; };
+		B27E681016C30D4E00796C55 /* ActualMusicInDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActualMusicInDB.m; sourceTree = "<group>"; };
+		B27E685816C4309C00796C55 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		B27E685A16C430A600796C55 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
+		B282884816D536BD00A5BF79 /* facebook_like_button_big.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = facebook_like_button_big.jpeg; sourceTree = "<group>"; };
+		B29947A616E8A7AC00E11FB5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B29947A816E8B5F800E11FB5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B29A3E1116D2D8600058E2CF /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		B29A3E1316D2D8A10058E2CF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		B29A3E1416D2D8A10058E2CF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		B29A3E1716D2D8B70058E2CF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		B29A3E1916D2DA1C0058E2CF /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		B2BE89E316C03B1100CBB7EE /* DJReptile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DJReptile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BE89E616C03B1100CBB7EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B2BE89E816C03B1100CBB7EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,10 +80,14 @@
 		B2BE8A0216C03B1100CBB7EE /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		B2BE8A0416C03B1100CBB7EE /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		B2BE8A0616C03B1100CBB7EE /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		B2BE8A0816C03B1100CBB7EE /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		B2BE8A0916C03B1100CBB7EE /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B2BE8A0B16C03B1100CBB7EE /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		B2BE8A0D16C03B1100CBB7EE /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		B2BE8A1416C03B8000CBB7EE /* DJ Reptile1,4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "DJ Reptile1,4.jpg"; sourceTree = "<group>"; };
+		B2BE8A1616C03D3200CBB7EE /* WishMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishMusicViewController.h; sourceTree = "<group>"; };
+		B2BE8A1716C03D3200CBB7EE /* WishMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishMusicViewController.m; sourceTree = "<group>"; };
+		B2BE8A1C16C03DBC00CBB7EE /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		B2C92A3216E17DC600671CF7 /* HowtoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowtoViewController.h; sourceTree = "<group>"; };
+		B2C92A3316E17DC600671CF7 /* HowtoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowtoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,15 +95,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29947A916E8B5F800E11FB5 /* CoreLocation.framework in Frameworks */,
+				B29947A716E8A7AD00E11FB5 /* MapKit.framework in Frameworks */,
+				B29A3E1816D2D8B70058E2CF /* Social.framework in Frameworks */,
+				B29A3E1516D2D8A10058E2CF /* Accounts.framework in Frameworks */,
+				B29A3E1616D2D8A10058E2CF /* AdSupport.framework in Frameworks */,
+				B2BE8A1D16C03DBC00CBB7EE /* libsqlite3.0.dylib in Frameworks */,
 				B2BE89E716C03B1100CBB7EE /* UIKit.framework in Frameworks */,
 				B2BE89E916C03B1100CBB7EE /* Foundation.framework in Frameworks */,
 				B2BE89EB16C03B1100CBB7EE /* CoreGraphics.framework in Frameworks */,
+				B29A3E1A16D2DA1C0058E2CF /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B273B4BF16EA5EED0086101D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B200679016EA73A60075171B /* GigAnnotation.h */,
+				B200679116EA73A60075171B /* GigAnnotation.m */,
+				B2BE89F516C03B1100CBB7EE /* AppDelegate.h */,
+				B2BE89F616C03B1100CBB7EE /* AppDelegate.m */,
+				B2BE89FE16C03B1100CBB7EE /* MainStoryboard.storyboard */,
+				B2C92A3216E17DC600671CF7 /* HowtoViewController.h */,
+				B2C92A3316E17DC600671CF7 /* HowtoViewController.m */,
+				B2BE8A0116C03B1100CBB7EE /* FirstViewController.h */,
+				B2BE8A0216C03B1100CBB7EE /* FirstViewController.m */,
+				B27E680F16C30D4E00796C55 /* ActualMusicInDB.h */,
+				B27E681016C30D4E00796C55 /* ActualMusicInDB.m */,
+				B2BE8A1616C03D3200CBB7EE /* WishMusicViewController.h */,
+				B2BE8A1716C03D3200CBB7EE /* WishMusicViewController.m */,
+				B240C43416C83228007A9874 /* NextGigsViewController.h */,
+				B240C43516C83229007A9874 /* NextGigsViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		B2BE89DA16C03B1100CBB7EE = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +153,14 @@
 		B2BE89E516C03B1100CBB7EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B29947A816E8B5F800E11FB5 /* CoreLocation.framework */,
+				B29947A616E8A7AC00E11FB5 /* MapKit.framework */,
+				B29A3E1716D2D8B70058E2CF /* Social.framework */,
+				B29A3E1916D2DA1C0058E2CF /* FacebookSDK.framework */,
+				B29A3E1316D2D8A10058E2CF /* Accounts.framework */,
+				B29A3E1416D2D8A10058E2CF /* AdSupport.framework */,
+				B29A3E1116D2D8600058E2CF /* FacebookSDKResources.bundle */,
+				B2BE8A1C16C03DBC00CBB7EE /* libsqlite3.0.dylib */,
 				B2BE89E616C03B1100CBB7EE /* UIKit.framework */,
 				B2BE89E816C03B1100CBB7EE /* Foundation.framework */,
 				B2BE89EA16C03B1100CBB7EE /* CoreGraphics.framework */,
@@ -94,15 +171,9 @@
 		B2BE89EC16C03B1100CBB7EE /* DJReptile */ = {
 			isa = PBXGroup;
 			children = (
-				B2BE89F516C03B1100CBB7EE /* AppDelegate.h */,
-				B2BE89F616C03B1100CBB7EE /* AppDelegate.m */,
-				B2BE89FE16C03B1100CBB7EE /* MainStoryboard.storyboard */,
-				B2BE8A0116C03B1100CBB7EE /* FirstViewController.h */,
-				B2BE8A0216C03B1100CBB7EE /* FirstViewController.m */,
+				B273B4BF16EA5EED0086101D /* Classes */,
 				B2BE8A0416C03B1100CBB7EE /* first.png */,
 				B2BE8A0616C03B1100CBB7EE /* first@2x.png */,
-				B2BE8A0816C03B1100CBB7EE /* SecondViewController.h */,
-				B2BE8A0916C03B1100CBB7EE /* SecondViewController.m */,
 				B2BE8A0B16C03B1100CBB7EE /* second.png */,
 				B2BE8A0D16C03B1100CBB7EE /* second@2x.png */,
 				B2BE89ED16C03B1100CBB7EE /* Supporting Files */,
@@ -113,8 +184,14 @@
 		B2BE89ED16C03B1100CBB7EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B272657716EC023500FCF9F8 /* living.gpx */,
+				B27E685A16C430A600796C55 /* icon@2x.png */,
+				B282884816D536BD00A5BF79 /* facebook_like_button_big.jpeg */,
+				B2BE8A1416C03B8000CBB7EE /* DJ Reptile1,4.jpg */,
+				B27E685816C4309C00796C55 /* icon@2x.png */,
 				B2BE89EE16C03B1100CBB7EE /* DJReptile-Info.plist */,
 				B2BE89EF16C03B1100CBB7EE /* InfoPlist.strings */,
+				B25A20DD16C2B1810083498B /* Icon.png */,
 				B2BE89F216C03B1100CBB7EE /* main.m */,
 				B2BE89F416C03B1100CBB7EE /* DJReptile-Prefix.pch */,
 				B2BE89F816C03B1100CBB7EE /* Default.png */,
@@ -184,6 +261,13 @@
 				B2BE8A0716C03B1100CBB7EE /* first@2x.png in Resources */,
 				B2BE8A0C16C03B1100CBB7EE /* second.png in Resources */,
 				B2BE8A0E16C03B1100CBB7EE /* second@2x.png in Resources */,
+				B2BE8A1516C03B8000CBB7EE /* DJ Reptile1,4.jpg in Resources */,
+				B25A20DE16C2B1810083498B /* Icon.png in Resources */,
+				B27E685916C4309C00796C55 /* icon@2x.png in Resources */,
+				B27E685B16C430A600796C55 /* icon@2x.png in Resources */,
+				B29A3E1216D2D8600058E2CF /* FacebookSDKResources.bundle in Resources */,
+				B282884916D536BD00A5BF79 /* facebook_like_button_big.jpeg in Resources */,
+				B272657816EC023500FCF9F8 /* living.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +281,11 @@
 				B2BE89F316C03B1100CBB7EE /* main.m in Sources */,
 				B2BE89F716C03B1100CBB7EE /* AppDelegate.m in Sources */,
 				B2BE8A0316C03B1100CBB7EE /* FirstViewController.m in Sources */,
-				B2BE8A0A16C03B1100CBB7EE /* SecondViewController.m in Sources */,
+				B2BE8A1816C03D3200CBB7EE /* WishMusicViewController.m in Sources */,
+				B27E681116C30D4E00796C55 /* ActualMusicInDB.m in Sources */,
+				B240C43616C83229007A9874 /* NextGigsViewController.m in Sources */,
+				B2C92A3416E17DC600671CF7 /* HowtoViewController.m in Sources */,
+				B200679216EA73A60075171B /* GigAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,10 +370,18 @@
 		B2BE8A1216C03B1100CBB7EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DJReptile/DJReptile-Prefix.pch";
 				INFOPLIST_FILE = "DJReptile/DJReptile-Info.plist";
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -293,10 +389,18 @@
 		B2BE8A1316C03B1100CBB7EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DJReptile/DJReptile-Prefix.pch";
 				INFOPLIST_FILE = "DJReptile/DJReptile-Info.plist";
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -320,6 +424,7 @@
 				B2BE8A1316C03B1100CBB7EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
