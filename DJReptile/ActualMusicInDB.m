@@ -84,9 +84,7 @@
     
     NSLog(@"View Load!");
     
-    [self.tableView reloadData];
-    
-    [self refreshMyTableView];
+
     
     //initialise the refresh controller
     refreshControl = [[UIRefreshControl alloc] init];
@@ -102,6 +100,11 @@
     self.mytableview.dataSource = self;
     
     
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self refreshMyTableView];
 }
 
 

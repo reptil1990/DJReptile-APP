@@ -7,6 +7,7 @@
 //
 
 #import "NextGigsViewController.h"
+#import "HowtoViewController.h"
 
 @interface NextGigsViewController ()
 
@@ -74,9 +75,6 @@
     NSLog(@"View Load!");
     
     
-    [self refreshMyTableView];
-    
-    
     //initialise the refresh controller
     refreshControl = [[UIRefreshControl alloc] init];
     //set the title for pull request
@@ -88,6 +86,13 @@
     
     
     
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    NSLog(@"ViewDidAppear");
+     [self refreshMyTableView];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -187,4 +192,10 @@
      
 }
 */
+- (IBAction)showMap:(id)sender {
+    
+    HowtoViewController *HowtoViewcontroller = [[HowtoViewController alloc]initWithNibName:nil bundle:nil];
+    [self presentViewController:HowtoViewcontroller animated:YES completion:nil];
+    
+}
 @end

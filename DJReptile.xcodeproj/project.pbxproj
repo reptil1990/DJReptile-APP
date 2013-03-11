@@ -22,6 +22,7 @@
 		B29A3E1616D2D8A10058E2CF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29A3E1416D2D8A10058E2CF /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B29A3E1816D2D8B70058E2CF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29A3E1716D2D8B70058E2CF /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B29A3E1A16D2DA1C0058E2CF /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29A3E1916D2DA1C0058E2CF /* FacebookSDK.framework */; };
+		B2B61C9A16ED5C4000869D48 /* DetailsOfGigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B61C9916ED5C4000869D48 /* DetailsOfGigViewController.m */; };
 		B2BE89E716C03B1100CBB7EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BE89E616C03B1100CBB7EE /* UIKit.framework */; };
 		B2BE89E916C03B1100CBB7EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BE89E816C03B1100CBB7EE /* Foundation.framework */; };
 		B2BE89EB16C03B1100CBB7EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BE89EA16C03B1100CBB7EE /* CoreGraphics.framework */; };
@@ -62,6 +63,8 @@
 		B29A3E1416D2D8A10058E2CF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		B29A3E1716D2D8B70058E2CF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		B29A3E1916D2DA1C0058E2CF /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		B2B61C9816ED5C4000869D48 /* DetailsOfGigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsOfGigViewController.h; sourceTree = "<group>"; };
+		B2B61C9916ED5C4000869D48 /* DetailsOfGigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsOfGigViewController.m; sourceTree = "<group>"; };
 		B2BE89E316C03B1100CBB7EE /* DJReptile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DJReptile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BE89E616C03B1100CBB7EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B2BE89E816C03B1100CBB7EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,11 +117,11 @@
 		B273B4BF16EA5EED0086101D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B200679016EA73A60075171B /* GigAnnotation.h */,
-				B200679116EA73A60075171B /* GigAnnotation.m */,
 				B2BE89F516C03B1100CBB7EE /* AppDelegate.h */,
 				B2BE89F616C03B1100CBB7EE /* AppDelegate.m */,
 				B2BE89FE16C03B1100CBB7EE /* MainStoryboard.storyboard */,
+				B2B61C9816ED5C4000869D48 /* DetailsOfGigViewController.h */,
+				B2B61C9916ED5C4000869D48 /* DetailsOfGigViewController.m */,
 				B2C92A3216E17DC600671CF7 /* HowtoViewController.h */,
 				B2C92A3316E17DC600671CF7 /* HowtoViewController.m */,
 				B2BE8A0116C03B1100CBB7EE /* FirstViewController.h */,
@@ -171,11 +174,8 @@
 		B2BE89EC16C03B1100CBB7EE /* DJReptile */ = {
 			isa = PBXGroup;
 			children = (
+				B2E0C32516EC14350027549F /* Annotations */,
 				B273B4BF16EA5EED0086101D /* Classes */,
-				B2BE8A0416C03B1100CBB7EE /* first.png */,
-				B2BE8A0616C03B1100CBB7EE /* first@2x.png */,
-				B2BE8A0B16C03B1100CBB7EE /* second.png */,
-				B2BE8A0D16C03B1100CBB7EE /* second@2x.png */,
 				B2BE89ED16C03B1100CBB7EE /* Supporting Files */,
 			);
 			path = DJReptile;
@@ -184,6 +184,10 @@
 		B2BE89ED16C03B1100CBB7EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B2BE8A0416C03B1100CBB7EE /* first.png */,
+				B2BE8A0616C03B1100CBB7EE /* first@2x.png */,
+				B2BE8A0B16C03B1100CBB7EE /* second.png */,
+				B2BE8A0D16C03B1100CBB7EE /* second@2x.png */,
 				B272657716EC023500FCF9F8 /* living.gpx */,
 				B27E685A16C430A600796C55 /* icon@2x.png */,
 				B282884816D536BD00A5BF79 /* facebook_like_button_big.jpeg */,
@@ -199,6 +203,15 @@
 				B2BE89FC16C03B1100CBB7EE /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2E0C32516EC14350027549F /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				B200679016EA73A60075171B /* GigAnnotation.h */,
+				B200679116EA73A60075171B /* GigAnnotation.m */,
+			);
+			name = Annotations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +299,7 @@
 				B240C43616C83229007A9874 /* NextGigsViewController.m in Sources */,
 				B2C92A3416E17DC600671CF7 /* HowtoViewController.m in Sources */,
 				B200679216EA73A60075171B /* GigAnnotation.m in Sources */,
+				B2B61C9A16ED5C4000869D48 /* DetailsOfGigViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +395,7 @@
 				INFOPLIST_FILE = "DJReptile/DJReptile-Info.plist";
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALIDATE_PRODUCT = YES;
+				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

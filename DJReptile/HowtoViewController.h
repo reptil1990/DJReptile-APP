@@ -16,6 +16,7 @@
     NSMutableArray *json;
    // MKMapView *myMapView;
     NSMutableArray *mapAnnotations;
+    NSMutableArray *descriptions;
 
 }
 

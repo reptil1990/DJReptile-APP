@@ -8,6 +8,7 @@
 
 #import "HowtoViewController.h"
 #import "GigAnnotation.h"
+#import "DetailsOfGigViewController.h"
 #define kGETUrl @"http://reptil1990.funpic.de/getjsongigs.php"
 
 
@@ -31,6 +32,7 @@
     
     self.myMapView.delegate = self;
     mapAnnotations = [[NSMutableArray alloc] initWithCapacity:2];
+    descriptions = [NSMutableArray array];
    
 }
 
@@ -71,6 +73,10 @@
     {
         self.myMapView.showsUserLocation=YES;
     }
+    else
+    {
+        self.myMapView.showsUserLocation = NO;
+    }
 }
 
 
@@ -98,16 +104,17 @@
 {
 
     [self creatAllAnnotations];
+    
+    self.myMapView.showsUserLocation = NO;
 }
 
+-(void)switchView
 
--(void)showDiscription:(NSString*)dsc
 {
 
-    UIAlertView *waitalert = [[UIAlertView alloc] initWithTitle:@"Info" message:dsc delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [waitalert show];
-}
 
+
+}
 
 
 -(void)creatAllAnnotations
@@ -124,6 +131,7 @@
     NSString *dbLatValue = [info objectForKey:@"lat"];
     NSString *Title = [info objectForKey:@"Location"];
     NSString *Des = [info objectForKey:@"Description"];
+    [descriptions addObject: Des];
     NSString *Subtitle = [NSString stringWithFormat:@"Date: %@ Time: %@",[info objectForKey:@"Date"],[info objectForKey:@"Time"]];
         
         CLLocationCoordinate2D location;
@@ -142,13 +150,19 @@
 
 -(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
-    NSLog(@"Did select Annotation");
+    NSLog(@"Did select Annotation %@",view);
+    
 }
 
 -(MKAnnotationView *)mapView:(MKMapView *)mV viewForAnnotation:(id <MKAnnotation>)annotation
 {
     
 	
+        if([annotation isKindOfClass: [MKUserLocation class]])
+        {
+        return nil;
+        }
+    
         MKPinAnnotationView *pinView = nil;
     
         static NSString *defaultPinID = @"Place to be";
@@ -172,12 +186,12 @@
 - (void)mapView:(MKMapView *)mv didAddAnnotationViews:(NSArray *)views
 {
     
-    if([json count] == 1)
-    {
+    if ([views count] == 1 && [json count] == 1){
+        
     
 	MKAnnotationView *annotationView = [views objectAtIndex:0];
 	id <MKAnnotation> mp = [annotationView annotation];
-	MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([mp coordinate], 2000, 2000);
+	MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([mp coordinate], 1000, 1000);
 	[mv setRegion:region animated:YES];
     }
 }

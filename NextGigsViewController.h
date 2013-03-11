@@ -19,5 +19,6 @@ UIRefreshControl *refreshControl;
 
  -(void) refreshMyTableView;
 
+- (IBAction)showMap:(id)sender;
 
 @end
