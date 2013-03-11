@@ -56,6 +56,7 @@ bool isKeyboardVisible = FALSE;
     NSData *data = [NSData dataWithContentsOfURL:url];
     
     [self getData:data];
+    NSLog(@"Data: %@", data);
     
 }
 
@@ -71,9 +72,7 @@ bool isKeyboardVisible = FALSE;
 //DEVELOP
 - (IBAction)resetTimer:(id)sender {
     
-    self.timer = nil;
-    [self.timer invalidate];
-    NSLog(@"Timer Reset");
+    [self resetTimer];
 }
 //DEVELOP
 
@@ -87,7 +86,7 @@ bool isKeyboardVisible = FALSE;
     
     NSDictionary *info = [json objectAtIndex:0];
     Status = [info objectForKey:@"Status"];
-    
+    NSLog(@"Status: %@", Status);
     if ([Status isEqualToString: @"1"]) {
     
     
@@ -180,6 +179,8 @@ bool isKeyboardVisible = FALSE;
             {
                 UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Something went Wrong! Sorry!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                 [alert2 show];
+                
+                [self resetTimer];
             }
         
         }

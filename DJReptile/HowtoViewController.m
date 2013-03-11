@@ -112,7 +112,8 @@
 
 {
 
-
+    DetailsOfGigViewController *DetailsView = [[DetailsOfGigViewController alloc]init];
+    [self.navigationController pushViewController:DetailsView animated:YES];
 
 }
 
@@ -175,7 +176,7 @@
 
     
         UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        [rightButton addTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
+        [rightButton addTarget:self action:@selector(switchView) forControlEvents:UIControlEventTouchUpInside];
         pinView.rightCalloutAccessoryView = rightButton;
 
         return pinView;

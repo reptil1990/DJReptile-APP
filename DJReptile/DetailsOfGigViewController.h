@@ -11,6 +11,8 @@
 
 @interface DetailsOfGigViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIWebView *WebView;
+
 
 - (IBAction)goBack:(id)sender;
 

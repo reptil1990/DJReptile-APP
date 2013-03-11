@@ -7,6 +7,7 @@
 //
 
 #import "ActualMusicInDB.h"
+#import "RateTitleViewController.h"
 
 @interface ActualMusicInDB ()
 
@@ -191,6 +192,18 @@
     }
     
     
+    UIButton *btn=[UIButton  buttonWithType:UIButtonTypeDetailDisclosure];
+    btn.tag = 194;
+    [btn setBackgroundColor:[UIColor clearColor]];
+    [btn setFrame:CGRectMake(290, 15, 25, 25)];
+    [btn addTarget:self action:@selector(editTable)
+  forControlEvents:UIControlEventTouchUpInside];
+    [cell.contentView addSubview:btn];
+    
+    
+    
+
+    
 
     
     switch (indexPath.section) {
@@ -221,6 +234,13 @@
     
     return cell;
 }
+
+
+-(void)editTable
+{
+    
+}
+
 
 
 -(void)sortinArray{
