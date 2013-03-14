@@ -1,19 +1,18 @@
 //
-//  RateTitleViewController.m
+//  SettingsViewController.m
 //  DJReptile
 //
 //  Created by Carsten Graf on 11.03.13.
 //  Copyright (c) 2013 Carsten Graf. All rights reserved.
 //
 
-#import "RateTitleViewController.h"
-#import "ActualMusicInDB.h"
+#import "SettingsViewController.h"
 
-@interface RateTitleViewController ()
+@interface SettingsViewController ()
 
 @end
 
-@implementation RateTitleViewController
+@implementation SettingsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -86,6 +86,11 @@ bool isKeyboardVisible = FALSE;
     
     NSDictionary *info = [json objectAtIndex:0];
     Status = [info objectForKey:@"Status"];
+    if (Status == nil) {
+        Status = [NSString stringWithFormat:@"1"];
+        
+    }
+    
     NSLog(@"Status: %@", Status);
     if ([Status isEqualToString: @"1"]) {
     

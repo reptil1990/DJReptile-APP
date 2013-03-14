@@ -1,5 +1,5 @@
 //
-//  RateTitleViewController.h
+//  SettingsViewController.h
 //  DJReptile
 //
 //  Created by Carsten Graf on 11.03.13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RateTitleViewController : UIViewController
+@interface SettingsViewController : UIViewController
 
 @end

@@ -7,12 +7,10 @@
 //
 
 #import "ActualMusicInDB.h"
-#import "RateTitleViewController.h"
 
 @interface ActualMusicInDB ()
 
 {
-    
     
     
     NSMutableArray *allValues;
@@ -34,7 +32,7 @@
     return self;
 }
 
-
+//Read JSON Data from Server
 -(void) getData:(NSData *) data{
     
     NSError *error;
@@ -45,6 +43,8 @@
 
 -(void) start {
     
+    //Read JSON Data from Server
+    
     NSURL *url = [NSURL URLWithString:kGETUrl];
     
     NSData *data = [NSData dataWithContentsOfURL:url];
@@ -54,7 +54,7 @@
     
 }
 
-
+//Pull to Refresh
 -(void)refreshMyTableView{
     
     //set the title while refreshing
@@ -123,7 +123,7 @@
 #pragma mark - Table view data source
 
 
-
+//Names of Sections
 - (NSString *) tableView:(UITableView *) tableView titleForHeaderInSection:(NSInteger)section {
     switch (section) {
         case 0:
@@ -164,7 +164,7 @@
     
     switch (section) {
         case 0:
-            return [HouseArrayArtist count];
+            return [HouseArrayArtist count];        //HouseArrayArtist count = HouseArrayTitle count
             break;
         case 1:
             return [HipHopArrayArtist count];
@@ -191,19 +191,6 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    
-    UIButton *btn=[UIButton  buttonWithType:UIButtonTypeDetailDisclosure];
-    btn.tag = 194;
-    [btn setBackgroundColor:[UIColor clearColor]];
-    [btn setFrame:CGRectMake(290, 15, 25, 25)];
-    [btn addTarget:self action:@selector(editTable)
-  forControlEvents:UIControlEventTouchUpInside];
-    [cell.contentView addSubview:btn];
-    
-    
-    
-
-    
 
     
     switch (indexPath.section) {
@@ -228,34 +215,30 @@
         }
     
     
-  //  cell.textLabel.text = [info objectForKey:@"Artist"];
-  //  cell.detailTextLabel.text = [info objectForKey:@"Titel"];
-    
-    
     return cell;
 }
 
 
--(void)editTable
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UIColor *color = ((indexPath.row % 2) == 0) ? [UIColor colorWithRed:255.0/255 green:255.0/255 blue:145.0/255 alpha:1]:[UIColor clearColor];
     
+     cell.backgroundColor = color;
 }
 
 
-
 -(void)sortinArray{
-    int i;
 
-    HouseArrayArtist = [[NSMutableArray alloc]initWithCapacity:100];
-    HouseArrayTitle = [[NSMutableArray alloc]initWithCapacity:100];
-    HipHopArrayArtist = [[NSMutableArray alloc]initWithCapacity:100];
-    HipHopArrayTitle = [[NSMutableArray alloc]initWithCapacity:100];
-    PartyArrayArtist = [[NSMutableArray alloc]initWithCapacity:100];
-    PartyArrayTitle = [[NSMutableArray alloc]initWithCapacity:100];
-    OtherArrayArtist = [[NSMutableArray alloc]initWithCapacity:100];
-    OtherArrayTitle = [[NSMutableArray alloc]initWithCapacity:100];
+    HouseArrayArtist = [NSMutableArray array];
+    HouseArrayTitle = [NSMutableArray array];
+    HipHopArrayArtist = [NSMutableArray array];
+    HipHopArrayTitle = [NSMutableArray array];
+    PartyArrayArtist = [NSMutableArray array];
+    PartyArrayTitle =[NSMutableArray array];
+    OtherArrayArtist = [NSMutableArray array];
+    OtherArrayTitle = [NSMutableArray array];
     
-    for (i = 0; i < [json count]; i++) {
+    for (int i = 0; i < [json count]; i++) {
         
         NSDictionary *info =  [json objectAtIndex:i];
         NSString *TitleValue = [info objectForKey:@"Titel"];

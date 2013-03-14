@@ -7,7 +7,7 @@
 //
 
 #import "DetailsOfGigViewController.h"
-#import "HowtoViewController.h"
+#import "MapController.h"
 
 @interface DetailsOfGigViewController ()
 

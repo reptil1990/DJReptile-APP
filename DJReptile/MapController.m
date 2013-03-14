@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Carsten Graf. All rights reserved.
 //
 
-#import "HowtoViewController.h"
+#import "MapController.h"
 #import "GigAnnotation.h"
 #import "DetailsOfGigViewController.h"
 #define kGETUrl @"http://reptil1990.funpic.de/getjsongigs.php"
@@ -36,8 +36,7 @@
    
 }
 
-
-
+//Get Data from Database
 -(void) getData:(NSData *) data{
     
     NSError *error;
@@ -60,13 +59,14 @@
 
 
 
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+
+//Show user Location
 - (IBAction)showLocation:(id)sender {
     
     if (!self.myMapView.userLocationVisible)
@@ -79,7 +79,7 @@
     }
 }
 
-
+//Chance Map Type
 - (IBAction)MapType:(id)sender {
     
         switch (((UISegmentedControl*)sender).selectedSegmentIndex) {
@@ -100,6 +100,7 @@
     
 }
 
+//Show annotation Pins
 -(IBAction)showgigs:(id)sender
 {
 
@@ -108,6 +109,8 @@
     self.myMapView.showsUserLocation = NO;
 }
 
+
+//Switch to Annotation viewController
 -(void)switchView
 
 {
@@ -117,7 +120,7 @@
 
 }
 
-
+//Read all annotations from DB and creat it
 -(void)creatAllAnnotations
 {
     
@@ -148,13 +151,15 @@
 
 }
 
-
+//Did select an annotation
 -(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
     NSLog(@"Did select Annotation %@",view);
     
 }
 
+
+//Annotation style
 -(MKAnnotationView *)mapView:(MKMapView *)mV viewForAnnotation:(id <MKAnnotation>)annotation
 {
     
@@ -184,6 +189,7 @@
     
 }
 
+//Annotation view create style
 - (void)mapView:(MKMapView *)mv didAddAnnotationViews:(NSArray *)views
 {
     

@@ -7,7 +7,7 @@
 //
 
 #import "NextGigsViewController.h"
-#import "HowtoViewController.h"
+#import "MapController.h"
 
 @interface NextGigsViewController ()
 

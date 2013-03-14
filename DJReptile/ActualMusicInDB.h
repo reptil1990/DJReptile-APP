@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SystemConfiguration/SystemConfiguration.h>
 
 #define kGETUrl @"http://reptil1990.funpic.de/getjson.php"
 
