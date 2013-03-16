@@ -69,14 +69,9 @@
 //Show user Location
 - (IBAction)showLocation:(id)sender {
     
-    if (!self.myMapView.userLocationVisible)
-    {
+    
         self.myMapView.showsUserLocation=YES;
-    }
-    else
-    {
-        self.myMapView.showsUserLocation = NO;
-    }
+
 }
 
 //Chance Map Type
