@@ -91,7 +91,8 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     NSLog(@"ViewDidAppear");
-     [self refreshMyTableView];
+    
+   //  [self refreshMyTableView];
 
 }
 
@@ -194,8 +195,8 @@
 */
 - (IBAction)showMap:(id)sender {
     
-    HowtoViewController *HowtoViewcontroller = [[HowtoViewController alloc]initWithNibName:nil bundle:nil];
-    [self presentViewController:HowtoViewcontroller animated:YES completion:nil];
+    MapController *Mapcontroller = [[MapController alloc]initWithNibName:nil bundle:nil];
+    [self presentViewController:Mapcontroller animated:YES completion:nil];
     
 }
 @end

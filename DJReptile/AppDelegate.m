@@ -16,8 +16,6 @@
     
     sleep(3);
     // Override point for customization after application launch.
-
-    
     
     return YES;
 }
@@ -31,8 +29,23 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+   [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    
+    
+    if ([CLLocationManager significantLocationChangeMonitoringAvailable]) {
+		// Stop significant location updates and start normal location updates again since the app is in the forefront.
+        MapController *mapcontoller = [[MapController alloc]init];
+        [mapcontoller.locationManager startMonitoringSignificantLocationChanges];
+        [mapcontoller.locationManager stopUpdatingLocation];
+        NSLog(@"Significant location change monitoring is available.");
+        
+    }
+	else {
+		NSLog(@"Significant location change monitoring is not available.");
+	}
+    
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -42,11 +55,24 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+	if ([CLLocationManager significantLocationChangeMonitoringAvailable]) {
+		// Stop significant location updates and start normal location updates again since the app is in the forefront.
+        MapController *mapcontoller = [[MapController alloc]init];
+        [mapcontoller.locationManager stopMonitoringSignificantLocationChanges];
+        [mapcontoller.locationManager startUpdatingLocation];
+	NSLog(@"Significant location change monitoring is available.");
+    }
+	else {
+		NSLog(@"Significant location change monitoring is not available.");
+	}
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+
+    MapController *mapcontoller = [[MapController alloc]init];
+    mapcontoller.locationManager = nil;
+
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 

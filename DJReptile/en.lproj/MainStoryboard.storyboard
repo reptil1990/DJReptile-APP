@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -89,6 +89,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="NRl-Oe-6xj" firstAttribute="top" secondItem="UMP-Kc-3cH" secondAttribute="top" constant="60" id="FfM-tN-4Yx"/>
                             <constraint firstItem="NRl-Oe-6xj" firstAttribute="leading" secondItem="UMP-Kc-3cH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XN6-ND-Vht"/>
@@ -100,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="-2867" y="-413"/>
         </scene>
-        <!--Howto View Controller-->
+        <!--Map Controller-->
         <scene sceneID="9lT-KK-UGO">
             <objects>
-                <viewController storyboardIdentifier="HowTo" id="0Ra-t4-hpb" customClass="HowtoViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HowTo" id="0Ra-t4-hpb" customClass="MapController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dOd-Ue-Nvp">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -157,38 +158,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0CN-eA-zR5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2760" y="1692"/>
-        </scene>
-        <!--Details Of Gig View Controller-->
-        <scene sceneID="uG1-or-xAa">
-            <objects>
-                <viewController id="AJK-yb-yDT" customClass="DetailsOfGigViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dwD-6V-Zqg">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPZ-IG-43n">
-                                <items>
-                                    <navigationItem title="Title" id="vYv-Pp-Nk6">
-                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="stop" id="H3Q-lK-4nJ">
-                                            <connections>
-                                                <action selector="goBack:" destination="AJK-yb-yDT" id="spW-oo-4a9"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="tPZ-IG-43n" firstAttribute="top" secondItem="dwD-6V-Zqg" secondAttribute="top" type="default" id="2d9-am-P3g"/>
-                            <constraint firstItem="tPZ-IG-43n" firstAttribute="leading" secondItem="dwD-6V-Zqg" secondAttribute="leading" type="default" id="iCJ-0y-eq7"/>
-                            <constraint firstItem="tPZ-IG-43n" firstAttribute="trailing" secondItem="dwD-6V-Zqg" secondAttribute="trailing" type="default" id="yoB-CN-HHt"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rcb-CL-8gF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2347" y="1692"/>
         </scene>
         <!--Wish Music View Controller - Wish Music-->
         <scene sceneID="Etm-6C-yWH">
@@ -429,7 +398,7 @@
                     <navigationItem key="navigationItem" title="next gigs" id="JmT-XK-eEd">
                         <barButtonItem key="rightBarButtonItem" title="Show on Map" id="dc9-aE-oPs">
                             <connections>
-                                <segue destination="0Ra-t4-hpb" kind="push" id="owf-XU-01L"/>
+                                <segue destination="0Ra-t4-hpb" kind="push" id="3i8-xD-nk8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -482,6 +451,52 @@
         <image name="DJ Reptile1,4.jpg" width="1772" height="1076"/>
         <image name="first" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="ActualMusicInDB" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActualMusicInDB.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mytableview" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="FirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
+        </class>
+        <class className="MapController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapController.h"/>
+            <relationships>
+                <relationship kind="action" name="MapType:"/>
+                <relationship kind="action" name="showLocation:"/>
+                <relationship kind="action" name="showgigs:"/>
+                <relationship kind="outlet" name="myMapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NextGigsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NextGigsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="showMap:"/>
+            </relationships>
+        </class>
+        <class className="SettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+        </class>
+        <class className="WishMusicViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WishMusicViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="ConfirmAlert:"/>
+                <relationship kind="action" name="hideKeyboard:"/>
+                <relationship kind="action" name="resetTimer:"/>
+                <relationship kind="outlet" name="TimerValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="secGenere" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="swTimer" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="txtArtist" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtTitle" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

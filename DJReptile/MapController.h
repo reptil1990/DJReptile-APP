@@ -9,23 +9,29 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "AppDelegate.h"
 
-@interface HowtoViewController : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate,MKAnnotation> {
+@interface MapController : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate,MKAnnotation> {
 
 
     NSMutableArray *json;
-   // MKMapView *myMapView;
     NSMutableArray *mapAnnotations;
     NSMutableArray *descriptions;
+    BOOL isTracking;
+    BOOL pendingRegionChange;
 
 }
 
 @property (strong, nonatomic) IBOutlet MKMapView *myMapView;
+@property (nonatomic, retain) NSMutableArray *updateEvents;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 
 - (IBAction)showLocation:(id)sender;
 - (IBAction)MapType:(id)sender;
 - (IBAction)showgigs:(id)sender;
+
+- (void)updateWithEvent:(NSString *)event;
 
 
 @end

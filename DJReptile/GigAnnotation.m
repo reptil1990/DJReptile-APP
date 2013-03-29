@@ -22,4 +22,17 @@
 }
 
 
+- (id)initWithCLRegion:(CLRegion *)newRegion {
+	self = [self init];
+	
+	if (self != nil) {
+		self.region = newRegion;
+		self.coordinate = _region.center;
+		self.radius = _region.radius;
+		self.title = @"Monitored Region";
+	}
+    
+	return self;
+}
+
 @end

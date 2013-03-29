@@ -31,7 +31,6 @@ bool isKeyboardVisible = FALSE;
     [super viewDidLoad];
     
     NSLog(@"View Load!");
-    
     [self start];
    
     

@@ -19,8 +19,11 @@
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, retain) CLRegion *region;
+@property (nonatomic, readwrite) CLLocationDistance radius;
 
 - (id)initWithTitle:(NSString *)ttl andSubtitle:(NSString*)sub andCoordinate:(CLLocationCoordinate2D)c2d;
+- (id)initWithCLRegion:(CLRegion *)newRegion;
 
 @end
 
